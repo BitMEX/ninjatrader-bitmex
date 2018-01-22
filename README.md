@@ -24,16 +24,16 @@ transactions. It only provides market data for research and testing purposes.
 - [Developers](#developers)
 
 ## Installation
-- Download the latest [NinjaTrader-BitMEX Release](https://github.com/BitMEX/ninjatrader-bitmex/releases)
-- Launch NinjaTrader
-- From the menu, select Tools > Import > NinjaScript Add-On
+1. Download the latest [NinjaTrader-BitMEX Release.](https://github.com/BitMEX/ninjatrader-bitmex/releases) You want the release zip, not source zip or tar.
+2. Launch NinjaTrader
+3. From the menu, select Tools > Import > NinjaScript Add-On
 
 ![tools menu](screenshots/install_1.png)
 
 ![import ninjascript](screenshots/install_2.png)
 
-- Select the zip file downloaded in step 1
-- Restart NinjaTrader
+4. Select the zip file downloaded in step 1
+5. Restart NinjaTrader
 
 
 ## Usage

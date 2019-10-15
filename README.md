@@ -1,4 +1,4 @@
-﻿# BitMEX NinjaTrader Adapter
+﻿# BitMEX NinjaTrader 8 Adapter
 
 NinjaTrader supports third-party plugins to integrate market data with their desktop software
 platform.
@@ -25,7 +25,7 @@ transactions. It only provides market data for research and testing purposes.
 
 ## Installation
 1. Download the latest [NinjaTrader-BitMEX Release.](https://github.com/BitMEX/ninjatrader-bitmex/releases) You want the release zip, not source zip or tar.
-2. Launch NinjaTrader
+2. Launch NinjaTrader 8
 3. From the menu, select Tools > Import > NinjaScript Add-On
 
 ![tools menu](screenshots/install_1.png)

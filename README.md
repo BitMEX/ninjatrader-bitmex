@@ -21,19 +21,18 @@ transactions. It only provides market data for research and testing purposes.
 - [Troubleshooting](#troubleshooting)
   * [No Market Data](#no-market-data)
   * [Empty Chart](#empty-chart)
-- [Developers](#developers)
 
 ## Installation
-1. Download the latest [NinjaTrader-BitMEX Release.](https://github.com/BitMEX/ninjatrader-bitmex/releases) You want the release zip, not source zip or tar.
-2. Launch NinjaTrader 8
-3. From the menu, select Tools > Import > NinjaScript Add-On
+- Download the latest [NinjaTrader-BitMEX Release](https://github.com/BitMEX/ninjatrader-bitmex/releases)
+- Launch NinjaTrader 8
+- From the menu, select Tools > Import > NinjaScript Add-On
 
 ![tools menu](screenshots/install_1.png)
 
 ![import ninjascript](screenshots/install_2.png)
 
-4. Select the zip file downloaded in step 1
-5. Restart NinjaTrader
+- Select the zip file downloaded in step 1
+- Restart NinjaTrader
 
 
 ## Usage
@@ -80,19 +79,8 @@ in the menu go to Tools > Instrument Lists. In the left pane of the dialog, clic
 the name of your list. Instruments can then be added to the list by name. Available BitMEX
 instruments can be viewed by opening Tools > Instruments and filtering by "BitMEX".
 
-> Note: NinjaTrader does not support all of BitMEX's contract names.
-
-> NinjaTrader does not support numbers in symbol names, so for futures like `XBTZ17`, you
-need to use the format SYMBOL MM-YY, where MM and YY are the two-digit month and year the
-contract expires. The year is the two digits at the end of the BitMEX symbol, 2017 in the case of
-`XBTZ17`. The month is designated by the letter immediately before the year, Z in this case. For
-a list of month codes, see [BitMEX's futures documentation.](https://www.bitmex.com/app/futuresGuideExamples#Futures-Month-Codes)
-
-> For relisting futures such as ETC7D, replace the suffix with "WKLY" for weekly futures or "DLY"
-for daily futures. For example, ETC7D becomes ETCWKLY.
-
 #### Live quotes
-To view live quotes for any symbol traded on BitMEX, click on New in the menu and select Basic
+To view live bid/ask data for any symbol traded on BitMEX, click on New in the menu and select Basic
 Entry or Market Analyzer. For Basic Entry, simply enter your symbol in the Instrument box. For
 Market Analyzer, right click in the window and select Add Symbol. Multiple symbols can be added
 in this way.
@@ -104,13 +92,20 @@ interested in. The window does not need to be refreshed, updates will automatica
 from BitMEX.
 
 #### Historical quotes
-To plot past BitMEX data, from the menu select New > Chart. In the window that appears, enter
+To plot historical tick data from BitMEX, select New > Chart from the top menu. In the window that appears, type
 your symbol and hit enter.
 
 Data can be viewed in 1 minute or 1 day bins. To select bin size, go to the properties pane,
 go to the Data Series section and choose Minute or Day in the Type dropdown.
 
 You can choose the date range in the Time Frame section of the Properties pane.
+
+Volume can be plotted in parallel with price data. To do so, right click on the chart and select
+"Indicators" or hit Ctrl-I. In the list of available indicators, select "VOL" and click Add.
+
+![volume indicator](screenshots/chart_volume_indicator.png)
+
+![chart with volume](screenshots/chart_volume.png)
 
 ##### Notes on charting
 BitMEX API requests are rate limited. If you specify a very wide date range, it may take a long time for the data to be returned.
@@ -169,3 +164,4 @@ correctly and you are connected.
 ### Empty Chart
 If you're charting prices for a futures contract, check the setting in Tools > Options >
 Market Data. The setting for Global Merge Policy should be Do Not Merge.
+
